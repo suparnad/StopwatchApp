@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+
+body {
+  font-family: 'Lora', serif;
+  background-color: #fff;
+  color: #000;
+}
+
+#header {
+  margin-top: 64px;
+  text-align: center;
+  font-size: 7vw;
+}
+
+#time {
+  text-align: center;
+  font-size: 10vw;
+}
+
+#controlsContainer {
+  font-weight: 700;
+  margin-bottom: 100px;
+}
+
+.lapClearButton {
+  display: block;
+}
+
+.control {
+  color: black;
+  height: 4vw;
+  width: 11vw;
+  border-radius: 1%;
+  text-align: center;
+  padding: 1% 0;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
+.control:active {
+  background-color: #fff;
+  color: #000;
+}
+
+#laps {
+  max-height: 270px;
+  overflow-y: scroll;
+  width: 30vw;
+  margin: auto;
+}
+
+.lap {
+  height: 50px;
+  border-bottom: 1px solid #000;
+  margin: 15px;
+}
+
+.laptitle {
+  font-size: 1.5em;
+  float: left;
+}
+
+.laptime {
+  font-size: 2em;
+  float: right;
+}
