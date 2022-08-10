@@ -53,19 +53,23 @@ $(function () {
     $(y).show();
   }
 
+  a = function () {
+    timeCounter++;
+    if (timeCounter == 100 * 60 * 100) {
+      timeCounter = 0;
+    }
+    lapCounter++;
+    if (lapCounter == 100 * 60 * 100) {
+      lapCounter = 0;
+    }
+    updateTime();
+  }
+
+  console.log(a);
+
   //start the counter
   function startAction() {
-    action = setInterval(function () {
-      timeCounter++;
-      if (timeCounter == 100 * 60 * 100) {
-        timeCounter = 0;
-      }
-      lapCounter++;
-      if (lapCounter == 100 * 60 * 100) {
-        lapCounter = 0;
-      }
-      updateTime();
-    }, 100);
+    action = setInterval(a, 10);
   }
 
   function updateTime() {
