@@ -1,6 +1,6 @@
 $(function () {
   //variables
-  var [activeStatus, timeCounter, lapCounter, action, lapNumber] = [0, 0, 0, 0];
+  var [activeStatus, timeCounter, lapCounter, action, lapNumber] = [0, 0, 0, 0, 0];
 
   //hours,minutes,seconds,centiseconds for time
   var [lapHours, lapMinutes, lapSeconds, lapCentiseconds] = [0, 0, 0, 0];
