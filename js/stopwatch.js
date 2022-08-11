@@ -53,32 +53,20 @@ $(function () {
     $(y).show();
   }
 
-  a = function () {
-    timeCounter++;
-    if (timeCounter == 100 * 60 * 100) {
-      timeCounter = 0;
-    }
-    lapCounter++;
-    if (lapCounter == 100 * 60 * 100) {
-      lapCounter = 0;
-    }
-    updateTime();
-  }
-
-  console.log(a);
-
   //start the counter
   function startAction() {
-    action = setInterval(a, 10);
+    action = setInterval(updateTime, 10);
   }
 
   function updateTime() {
-
+    timeCounter++;
     //calculate stopwatch time and conver centiseconds to hours, mins, seconds and centiseconds
     Hours = Math.floor(timeCounter / 360000);
     Minutes = Math.floor((timeCounter % 360000) / 6000);
     Seconds = Math.floor((timeCounter % 6000) / 100);
     Centiseconds = (timeCounter % 6000) % 100;
+
+    //console.log(timeCounter);
 
     // Set text contents to the selected elements
     $("#hour").text(leftPad(Hours));
@@ -87,6 +75,7 @@ $(function () {
     $("#centisecond").text(leftPad(Centiseconds));
 
     //calculate lap time and conver centiseconds to hours, mins, seconds and centiseconds
+    lapCounter++;
     lapHours = Math.floor(lapCounter / 360000);
     lapMinutes = Math.floor((lapCounter % 360000) / 6000);
     lapSeconds = Math.floor((lapCounter % 6000) / 100);
